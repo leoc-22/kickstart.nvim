@@ -360,7 +360,7 @@ require('lazy').setup({
         -- },
         -- pickers = {}
         defaults = {
-          layout_strategy = 'flex',
+          layout_strategy = 'vertical',
           layout_config = {
             preview_cutoff = 33,
           },
