@@ -924,11 +924,13 @@ require('lazy').setup({
     },
 
     config = function()
+      vim.keymap.set('n', '<C-e>', '<Cmd>Neotree toggle<CR>')
+
       require('neo-tree').setup {
         close_if_last_window = true,
         window = {
-          position = 'current',
-          width = 20,
+          position = 'left',
+          width = 25,
         },
         filesystem = {
           filtered_items = {
