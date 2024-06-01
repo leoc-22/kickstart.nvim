@@ -603,6 +603,8 @@ require('lazy').setup({
         dockerls = {},
         kotlin_language_server = {},
         html = {},
+        terraformls = {},
+        jsonls = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -618,6 +620,7 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -940,7 +943,6 @@ require('lazy').setup({
             hide_by_name = {
               '.DS_Store',
               'thumbs.db',
-              'node_modules',
             },
             hide_by_pattern = {
               --"*.meta",
